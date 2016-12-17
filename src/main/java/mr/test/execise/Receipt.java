@@ -6,6 +6,8 @@ package mr.test.execise;
 import java.util.Map;
 
 /**
+ * A simple bean for a receipt.
+ * 
  * @author matteo.roscio
  */
 public class Receipt {
@@ -14,17 +16,28 @@ public class Receipt {
 	private Double tax;
 	private Double total;
 
+	/**
+	 * A simple bean for product info required by receipt.
+	 */
 	public static class ProductInfo {
 		private Integer quantity;
 		private Double cost;
 
+		/**
+		 * Create a product info.
+		 * 
+		 * @param quantity
+		 *            a product quantity
+		 * @param cost
+		 *            a product cost
+		 */
 		public ProductInfo(Integer quantity, Double cost) {
 			this.quantity = quantity;
 			this.cost = cost;
 		}
 
 		/**
-		 * Standard getter for quantity.
+		 * Get the product quantity for receipt.
 		 * 
 		 * @return the quantity
 		 */
@@ -33,7 +46,7 @@ public class Receipt {
 		}
 
 		/**
-		 * Standard setter for quantity.
+		 * Set the product quantity for receipt.
 		 * 
 		 * @param quantity
 		 *            the quantity to set
@@ -43,7 +56,7 @@ public class Receipt {
 		}
 
 		/**
-		 * Standard getter for cost.
+		 * Get the product cost for receipt.
 		 * 
 		 * @return the cost
 		 */
@@ -53,6 +66,16 @@ public class Receipt {
 
 	}
 
+	/**
+	 * Create a receipt.
+	 * 
+	 * @param items
+	 *            a collection of products
+	 * @param tax
+	 *            the tax amount
+	 * @param total
+	 *            the total amount
+	 */
 	public Receipt(Map<Product, ProductInfo> items, Double tax, Double total) {
 		super();
 		this.items = items;
@@ -61,7 +84,7 @@ public class Receipt {
 	}
 
 	/**
-	 * Standard getter for items.
+	 * Get the collection of products.
 	 * 
 	 * @return the items
 	 */
@@ -70,7 +93,7 @@ public class Receipt {
 	}
 
 	/**
-	 * Standard getter for tax.
+	 * Get the tax amount.
 	 * 
 	 * @return the tax
 	 */
@@ -79,7 +102,7 @@ public class Receipt {
 	}
 
 	/**
-	 * Standard getter for total.
+	 * Get the total amount.
 	 * 
 	 * @return the total
 	 */

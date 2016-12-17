@@ -4,6 +4,8 @@
 package mr.test.execise;
 
 /**
+ * A simple bean for product data.
+ * 
  * @author matteo.roscio
  */
 public class Product {
@@ -13,6 +15,18 @@ public class Product {
 	private ProductType productType;
 	private boolean imported;
 
+	/**
+	 * Create a new product.
+	 * 
+	 * @param name
+	 *            product name
+	 * @param price
+	 *            product price
+	 * @param productType
+	 *            product type
+	 * @param imported
+	 *            if product is imported
+	 */
 	public Product(String name, Double price, ProductType productType, boolean imported) {
 		super();
 		this.name = name;
@@ -22,7 +36,7 @@ public class Product {
 	}
 
 	/**
-	 * Standard getter for name.
+	 * Get the product name.
 	 * 
 	 * @return the name
 	 */
@@ -31,7 +45,7 @@ public class Product {
 	}
 
 	/**
-	 * Standard getter for price.
+	 * Get the product price.
 	 * 
 	 * @return the price
 	 */
@@ -40,7 +54,7 @@ public class Product {
 	}
 
 	/**
-	 * Standard getter for productType.
+	 * Get the product type.
 	 * 
 	 * @return the productType
 	 */
@@ -49,7 +63,7 @@ public class Product {
 	}
 
 	/**
-	 * Standard getter for imported.
+	 * Get <code>true</code> for imported product, <code>false</code> otherwise.
 	 * 
 	 * @return the imported
 	 */
